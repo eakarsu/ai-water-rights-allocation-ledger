@@ -1,0 +1,608 @@
+{
+  "WaterAccount": {
+    "name": "WaterAccount",
+    "fields": [
+      {
+        "name": "name",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "holder",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "watershed",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "permitNumber",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "unit",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "seasonStart",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      }
+    ]
+  },
+  "WaterEntitlement": {
+    "name": "WaterEntitlement",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "priorityDate",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "allocationUnits",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "source",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "restrictionText",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "ruleVersion",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "waterAccountId",
+        "kind": "string",
+        "required": true,
+        "relation": "WaterAccount"
+      }
+    ],
+    "parent": {
+      "entity": "WaterAccount",
+      "field": "waterAccountId"
+    }
+  },
+  "DiversionPoint": {
+    "name": "DiversionPoint",
+    "fields": [
+      {
+        "name": "name",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "pointCode",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "location",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "meterCode",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "capacityUnits",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "waterAccountId",
+        "kind": "string",
+        "required": true,
+        "relation": "WaterAccount"
+      }
+    ],
+    "parent": {
+      "entity": "WaterAccount",
+      "field": "waterAccountId"
+    }
+  },
+  "MeterReading": {
+    "name": "MeterReading",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "diversionPointId",
+        "kind": "string",
+        "required": true,
+        "relation": "DiversionPoint"
+      },
+      {
+        "name": "readAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "cumulativeUnits",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "unit",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "reader",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "waterAccountId",
+        "kind": "string",
+        "required": true,
+        "relation": "WaterAccount"
+      }
+    ],
+    "parent": {
+      "entity": "WaterAccount",
+      "field": "waterAccountId"
+    }
+  },
+  "WaterTransfer": {
+    "name": "WaterTransfer",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "counterparty",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "direction",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "units",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "effectiveAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "approvalReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "waterAccountId",
+        "kind": "string",
+        "required": true,
+        "relation": "WaterAccount"
+      }
+    ],
+    "parent": {
+      "entity": "WaterAccount",
+      "field": "waterAccountId"
+    }
+  },
+  "WaterDelivery": {
+    "name": "WaterDelivery",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "diversionPointId",
+        "kind": "string",
+        "required": true,
+        "relation": "DiversionPoint"
+      },
+      {
+        "name": "deliveredAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "units",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "recipient",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "receipt",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "waterAccountId",
+        "kind": "string",
+        "required": true,
+        "relation": "WaterAccount"
+      }
+    ],
+    "parent": {
+      "entity": "WaterAccount",
+      "field": "waterAccountId"
+    }
+  },
+  "CurtailmentNotice": {
+    "name": "CurtailmentNotice",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "effectiveAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "endAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "authority",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "restrictionText",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "sourceReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "waterAccountId",
+        "kind": "string",
+        "required": true,
+        "relation": "WaterAccount"
+      }
+    ],
+    "parent": {
+      "entity": "WaterAccount",
+      "field": "waterAccountId"
+    }
+  },
+  "WaterOrder": {
+    "name": "WaterOrder",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requestedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "deliveryAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "requestedUnits",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "recipient",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "instructions",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "waterAccountId",
+        "kind": "string",
+        "required": true,
+        "relation": "WaterAccount"
+      }
+    ],
+    "parent": {
+      "entity": "WaterAccount",
+      "field": "waterAccountId"
+    }
+  },
+  "SeasonReconciliation": {
+    "name": "SeasonReconciliation",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "seasonEnd",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "openingUnits",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "usedUnits",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "remainingUnits",
+        "kind": "number",
+        "required": true,
+        "min": 0
+      },
+      {
+        "name": "evidence",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "waterAccountId",
+        "kind": "string",
+        "required": true,
+        "relation": "WaterAccount"
+      }
+    ],
+    "parent": {
+      "entity": "WaterAccount",
+      "field": "waterAccountId"
+    }
+  },
+  "OperationalTask": {
+    "name": "OperationalTask",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "owner",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "priority",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "startAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "dueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "done",
+        "kind": "boolean",
+        "required": true
+      },
+      {
+        "name": "notes",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "waterAccountId",
+        "kind": "string",
+        "required": true,
+        "relation": "WaterAccount"
+      }
+    ],
+    "parent": {
+      "entity": "WaterAccount",
+      "field": "waterAccountId"
+    }
+  },
+  "RuleVersion": {
+    "name": "RuleVersion",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "jurisdiction",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "version",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "effectiveAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "expiresAt",
+        "kind": "date",
+        "required": false
+      },
+      {
+        "name": "sourceUrl",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requirementText",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "waterAccountId",
+        "kind": "string",
+        "required": true,
+        "relation": "WaterAccount"
+      }
+    ],
+    "parent": {
+      "entity": "WaterAccount",
+      "field": "waterAccountId"
+    }
+  },
+  "DocumentRequirement": {
+    "name": "DocumentRequirement",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "category",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requiredBy",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "sourceReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "evidenceReference",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "reviewNotes",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "waterAccountId",
+        "kind": "string",
+        "required": true,
+        "relation": "WaterAccount"
+      }
+    ],
+    "parent": {
+      "entity": "WaterAccount",
+      "field": "waterAccountId"
+    }
+  }
+}

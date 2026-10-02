@@ -1,0 +1,356 @@
+// Generated schema — modeled after beautyhqio conventions.
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  active       Boolean @default(true)
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         Role     @default(ANALYST)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+  ANALYST
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  actorId   String?
+  actorName String?
+  action    String
+  entity    String
+  entityId  String?
+  detail    String?
+  createdAt DateTime @default(now())
+}
+
+model WorkflowAnalysis {
+ id String @id @default(cuid())
+ actorId String
+ workflow String
+ subjectEntity String
+ subjectId String
+ input Json
+ evidence Json
+ evidenceHash String
+ result Json
+ model String
+ receipt String?
+ createdAt DateTime @default(now())
+ @@index([workflow, createdAt])
+}
+model RecordReview {
+ id String @id @default(cuid())
+ actorId String
+ entity String
+ entityId String
+ version String
+ reason String
+ createdAt DateTime @default(now())
+ @@unique([entity, entityId, version, actorId])
+}
+model UsageBucket {
+ id String @id
+ calls Int
+}
+model IssuedCredential {
+ token String @id
+ entity String
+ entityId String
+ version String
+ assertion Json
+ createdAt DateTime @default(now())
+ revokedAt DateTime?
+ @@index([entity, entityId, createdAt])
+}
+
+model DomainArtifact {
+ id String @id @default(cuid())
+ subjectEntity String
+ subjectId String
+ title String
+ content String
+ contentHash String
+ actorId String
+ approvedBy String?
+ createdAt DateTime @default(now())
+ @@index([subjectEntity, subjectId])
+}
+
+model RecordApproval {
+ id String @id
+ version String
+}
+model DomainExecution {
+ id String @id
+ actorId String
+ connectorId String
+ action String
+ subjectEntity String
+ subjectId String
+ version String
+ status String
+ result Json?
+ createdAt DateTime @default(now())
+}
+
+model WorkSession {
+ id String @id @default(cuid())
+ actorId String
+ respondentId String
+ subjectEntity String
+ subjectId String
+ questions Json
+ answers Json
+ currentQuestion String?
+ status String
+ deadline DateTime
+ createdAt DateTime @default(now())
+ @@index([respondentId, createdAt])
+}
+model SessionMedia {
+ id String @id @default(cuid())
+ sessionId String
+ questionId String
+ actorId String
+ contentType String
+ bytes Bytes
+ contentHash String
+ createdAt DateTime @default(now())
+ @@index([sessionId])
+}
+
+model AppSetting {
+ id String @id
+ value Json
+ updatedAt DateTime @updatedAt
+}
+
+model WaterAccount {
+ id String @id @default(cuid())
+ name String
+ holder String
+ watershed String
+ permitNumber String
+ unit String
+ seasonStart DateTime
+ status String @default("Draft")
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ inverseWaterEntitlement_waterAccountId WaterEntitlement[] @relation("WaterEntitlement_waterAccountId")
+ inverseDiversionPoint_waterAccountId DiversionPoint[] @relation("DiversionPoint_waterAccountId")
+ inverseMeterReading_waterAccountId MeterReading[] @relation("MeterReading_waterAccountId")
+ inverseWaterTransfer_waterAccountId WaterTransfer[] @relation("WaterTransfer_waterAccountId")
+ inverseWaterDelivery_waterAccountId WaterDelivery[] @relation("WaterDelivery_waterAccountId")
+ inverseCurtailmentNotice_waterAccountId CurtailmentNotice[] @relation("CurtailmentNotice_waterAccountId")
+ inverseWaterOrder_waterAccountId WaterOrder[] @relation("WaterOrder_waterAccountId")
+ inverseSeasonReconciliation_waterAccountId SeasonReconciliation[] @relation("SeasonReconciliation_waterAccountId")
+ inverseOperationalTask_waterAccountId OperationalTask[] @relation("OperationalTask_waterAccountId")
+ inverseRuleVersion_waterAccountId RuleVersion[] @relation("RuleVersion_waterAccountId")
+ inverseDocumentRequirement_waterAccountId DocumentRequirement[] @relation("DocumentRequirement_waterAccountId")
+}
+
+model WaterEntitlement {
+ id String @id @default(cuid())
+ title String
+ priorityDate DateTime
+ allocationUnits Float
+ source String
+ restrictionText String
+ ruleVersion String
+ status String @default("Draft")
+ waterAccountId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([waterAccountId])
+ linkedWaterAccountId WaterAccount @relation("WaterEntitlement_waterAccountId", fields: [waterAccountId], references: [id], onDelete: Restrict)
+}
+
+model DiversionPoint {
+ id String @id @default(cuid())
+ name String
+ pointCode String
+ location String
+ meterCode String
+ capacityUnits Float
+ status String @default("Draft")
+ waterAccountId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([waterAccountId])
+ linkedWaterAccountId WaterAccount @relation("DiversionPoint_waterAccountId", fields: [waterAccountId], references: [id], onDelete: Restrict)
+ inverseMeterReading_diversionPointId MeterReading[] @relation("MeterReading_diversionPointId")
+ inverseWaterDelivery_diversionPointId WaterDelivery[] @relation("WaterDelivery_diversionPointId")
+}
+
+model MeterReading {
+ id String @id @default(cuid())
+ title String
+ diversionPointId String
+ readAt DateTime
+ cumulativeUnits Float
+ unit String
+ reader String
+ status String @default("Draft")
+ waterAccountId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([waterAccountId])
+ linkedDiversionPointId DiversionPoint @relation("MeterReading_diversionPointId", fields: [diversionPointId], references: [id], onDelete: Restrict)
+ linkedWaterAccountId WaterAccount @relation("MeterReading_waterAccountId", fields: [waterAccountId], references: [id], onDelete: Restrict)
+}
+
+model WaterTransfer {
+ id String @id @default(cuid())
+ title String
+ counterparty String
+ direction String
+ units Float
+ effectiveAt DateTime
+ approvalReference String
+ status String @default("Draft")
+ waterAccountId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([waterAccountId])
+ linkedWaterAccountId WaterAccount @relation("WaterTransfer_waterAccountId", fields: [waterAccountId], references: [id], onDelete: Restrict)
+}
+
+model WaterDelivery {
+ id String @id @default(cuid())
+ title String
+ diversionPointId String
+ deliveredAt DateTime
+ units Float
+ recipient String
+ receipt String
+ status String @default("Draft")
+ waterAccountId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([waterAccountId])
+ linkedDiversionPointId DiversionPoint @relation("WaterDelivery_diversionPointId", fields: [diversionPointId], references: [id], onDelete: Restrict)
+ linkedWaterAccountId WaterAccount @relation("WaterDelivery_waterAccountId", fields: [waterAccountId], references: [id], onDelete: Restrict)
+}
+
+model CurtailmentNotice {
+ id String @id @default(cuid())
+ title String
+ effectiveAt DateTime
+ endAt DateTime
+ authority String
+ restrictionText String
+ sourceReference String
+ status String @default("Draft")
+ waterAccountId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([waterAccountId])
+ linkedWaterAccountId WaterAccount @relation("CurtailmentNotice_waterAccountId", fields: [waterAccountId], references: [id], onDelete: Restrict)
+}
+
+model WaterOrder {
+ id String @id @default(cuid())
+ title String
+ requestedAt DateTime
+ deliveryAt DateTime
+ requestedUnits Float
+ recipient String
+ instructions String
+ status String @default("Draft")
+ waterAccountId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([waterAccountId])
+ linkedWaterAccountId WaterAccount @relation("WaterOrder_waterAccountId", fields: [waterAccountId], references: [id], onDelete: Restrict)
+}
+
+model SeasonReconciliation {
+ id String @id @default(cuid())
+ title String
+ seasonEnd DateTime
+ openingUnits Float
+ usedUnits Float
+ remainingUnits Float
+ evidence String
+ status String @default("Draft")
+ waterAccountId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([waterAccountId])
+ linkedWaterAccountId WaterAccount @relation("SeasonReconciliation_waterAccountId", fields: [waterAccountId], references: [id], onDelete: Restrict)
+}
+
+model OperationalTask {
+ id String @id @default(cuid())
+ title String
+ owner String
+ priority String
+ startAt DateTime
+ dueAt DateTime
+ done Boolean
+ notes String?
+ status String @default("Draft")
+ waterAccountId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([waterAccountId])
+ linkedWaterAccountId WaterAccount @relation("OperationalTask_waterAccountId", fields: [waterAccountId], references: [id], onDelete: Restrict)
+}
+
+model RuleVersion {
+ id String @id @default(cuid())
+ title String
+ jurisdiction String
+ version String
+ effectiveAt DateTime
+ expiresAt DateTime?
+ sourceUrl String
+ requirementText String
+ status String @default("Draft")
+ waterAccountId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([waterAccountId])
+ linkedWaterAccountId WaterAccount @relation("RuleVersion_waterAccountId", fields: [waterAccountId], references: [id], onDelete: Restrict)
+}
+
+model DocumentRequirement {
+ id String @id @default(cuid())
+ title String
+ category String
+ requiredBy DateTime
+ sourceReference String
+ evidenceReference String?
+ reviewNotes String?
+ status String @default("Draft")
+ waterAccountId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([waterAccountId])
+ linkedWaterAccountId WaterAccount @relation("DocumentRequirement_waterAccountId", fields: [waterAccountId], references: [id], onDelete: Restrict)
+}

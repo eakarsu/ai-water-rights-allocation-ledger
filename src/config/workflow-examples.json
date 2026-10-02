@@ -1,0 +1,354 @@
+{
+  "permit-restriction-extraction": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare permit restriction extraction for fictional example 09-1.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to permit restriction extraction. Attach real approved sources separately."
+      },
+      "id": "permit-restriction-extraction-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare permit restriction extraction for fictional example 09-2.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to permit restriction extraction. Attach real approved sources separately."
+      },
+      "id": "permit-restriction-extraction-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare permit restriction extraction for fictional example 09-3.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to permit restriction extraction. Attach real approved sources separately."
+      },
+      "id": "permit-restriction-extraction-3"
+    }
+  ],
+  "diversion-reading-reconciliation": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare diversion reading reconciliation for fictional example 09-1.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to diversion reading reconciliation. Attach real approved sources separately."
+      },
+      "id": "diversion-reading-reconciliation-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare diversion reading reconciliation for fictional example 09-2.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to diversion reading reconciliation. Attach real approved sources separately."
+      },
+      "id": "diversion-reading-reconciliation-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare diversion reading reconciliation for fictional example 09-3.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to diversion reading reconciliation. Attach real approved sources separately."
+      },
+      "id": "diversion-reading-reconciliation-3"
+    }
+  ],
+  "transfer-packet-review": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare transfer packet review for fictional example 09-1.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to transfer packet review. Attach real approved sources separately."
+      },
+      "id": "transfer-packet-review-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare transfer packet review for fictional example 09-2.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to transfer packet review. Attach real approved sources separately."
+      },
+      "id": "transfer-packet-review-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare transfer packet review for fictional example 09-3.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to transfer packet review. Attach real approved sources separately."
+      },
+      "id": "transfer-packet-review-3"
+    }
+  ],
+  "curtailment-summary": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare curtailment summary for fictional example 09-1.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to curtailment summary. Attach real approved sources separately."
+      },
+      "id": "curtailment-summary-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare curtailment summary for fictional example 09-2.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to curtailment summary. Attach real approved sources separately."
+      },
+      "id": "curtailment-summary-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare curtailment summary for fictional example 09-3.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to curtailment summary. Attach real approved sources separately."
+      },
+      "id": "curtailment-summary-3"
+    }
+  ],
+  "delivery-variance-explanation": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare delivery variance explanation for fictional example 09-1.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to delivery variance explanation. Attach real approved sources separately."
+      },
+      "id": "delivery-variance-explanation-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare delivery variance explanation for fictional example 09-2.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to delivery variance explanation. Attach real approved sources separately."
+      },
+      "id": "delivery-variance-explanation-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare delivery variance explanation for fictional example 09-3.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to delivery variance explanation. Attach real approved sources separately."
+      },
+      "id": "delivery-variance-explanation-3"
+    }
+  ],
+  "season-reconciliation-narrative": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare season reconciliation narrative for fictional example 09-1.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to season reconciliation narrative. Attach real approved sources separately."
+      },
+      "id": "season-reconciliation-narrative-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare season reconciliation narrative for fictional example 09-2.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to season reconciliation narrative. Attach real approved sources separately."
+      },
+      "id": "season-reconciliation-narrative-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare season reconciliation narrative for fictional example 09-3.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to season reconciliation narrative. Attach real approved sources separately."
+      },
+      "id": "season-reconciliation-narrative-3"
+    }
+  ],
+  "evidence-completeness-review": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare evidence completeness review for fictional example 09-1.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to evidence completeness review. Attach real approved sources separately."
+      },
+      "id": "evidence-completeness-review-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare evidence completeness review for fictional example 09-2.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to evidence completeness review. Attach real approved sources separately."
+      },
+      "id": "evidence-completeness-review-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare evidence completeness review for fictional example 09-3.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to evidence completeness review. Attach real approved sources separately."
+      },
+      "id": "evidence-completeness-review-3"
+    }
+  ],
+  "operations-handoff-draft": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare operations handoff draft for fictional example 09-1.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to operations handoff draft. Attach real approved sources separately."
+      },
+      "id": "operations-handoff-draft-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare operations handoff draft for fictional example 09-2.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to operations handoff draft. Attach real approved sources separately."
+      },
+      "id": "operations-handoff-draft-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare operations handoff draft for fictional example 09-3.",
+        "sourceContext": "Fictional training scenario for Irrigation districts, agricultural groups and water-rights managers. Record rights, priority dates, diversion measurements, authorized transfers and allocation scenarios under supplied jurisdiction rules. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to operations handoff draft. Attach real approved sources separately."
+      },
+      "id": "operations-handoff-draft-3"
+    }
+  ]
+}
