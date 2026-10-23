@@ -354,3 +354,31 @@ model DocumentRequirement {
  @@index([waterAccountId])
  linkedWaterAccountId WaterAccount @relation("DocumentRequirement_waterAccountId", fields: [waterAccountId], references: [id], onDelete: Restrict)
 }
+
+enum TaskStatus {
+  OPEN
+  DONE
+  CANCELLED
+}
+
+enum TaskPriority {
+  LOW
+  NORMAL
+  HIGH
+}
+
+model StaffTask {
+  id          String       @id @default(cuid())
+  title       String
+  description String?
+  status      TaskStatus   @default(OPEN)
+  priority    TaskPriority @default(NORMAL)
+  dueAt       DateTime?
+  completedAt DateTime?
+  createdById String
+  assigneeId  String?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@index([status, dueAt])
+}
